@@ -515,6 +515,50 @@ body {
     line-height: 1.6;
 }
 
+/* Header Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        background: #181f2a;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        padding: 32px 0 24px 0;
+        transition: all 0.3s;
+        align-items: center;
+    }
+    .nav.open {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .nav a {
+        padding: 18px 0;
+        font-size: 1.2rem;
+        width: 100vw;
+        text-align: center;
+        border-bottom: 1px solid #222b3a;
+    }
+    .nav a:last-child {
+        border-bottom: none;
+    }
+}
+
 @media (max-width: 1200px) {
     .beneficios-grid {
         gap: 16px;
